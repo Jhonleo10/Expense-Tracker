@@ -1,0 +1,137 @@
+
+.transaction-history-container {
+    padding: 20px;
+    background: url('https://t4.ftcdn.net/jpg/09/45/18/95/360_F_945189500_WmtyUBauwsmI44UQAhXslGc0PbbKc2Fb.jpg') no-repeat center center/cover;
+    min-height: 100vh;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+  }
+  .timeline {
+    position: relative;
+    margin: 20px 0;
+    padding: 20px 0;
+  }
+  
+  .timeline::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 4px;
+    background: #007bff;
+    z-index: 0;
+  }
+
+  .timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+  }
+  
+  .timeline-item-left {
+    text-align: right;
+  }
+  
+  .timeline-item-right {
+    text-align: left;
+  }
+
+  .timeline-icon {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    border: 2px solid #007bff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+  
+  .timeline-icon .income-icon {
+    color: #28a745;
+    font-size: 1.5rem;
+  }
+  
+  .timeline-icon .expense-icon {
+    color: #dc3545;
+    font-size: 1.5rem;
+  }
+
+  .timeline-content {
+    background: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    max-width: 45%;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .timeline-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  .timeline-item-left .timeline-content {
+    margin-right: 60px;
+  }
+  
+  .timeline-item-right .timeline-content {
+    margin-left: 60px;
+  }
+
+  .timeline-content h5 {
+    font-size: 1.25rem;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  .timeline-content .transaction-date {
+    font-size: 0.85rem;
+    color: #6c757d;
+    margin-bottom: 10px;
+  }
+  
+  .timeline-content .transaction-amount {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #007bff;
+  }
+
+  .timeline-content button {
+    margin-top: 10px;
+    font-size: 0.85rem;
+  }
+  
+  @media (max-width: 768px) {
+    .timeline-content {
+      max-width: 80%;
+    }
+  
+    .timeline-item-left .timeline-content,
+    .timeline-item-right .timeline-content {
+      margin: 0 auto;
+    }
+  
+    .timeline::before {
+      left: 20px;
+    }
+  
+    .timeline-icon {
+      left: 20px;
+    }
+  }
+  
